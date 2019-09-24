@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
 using System.Media;
+
 /// <summary>
 /// Created by Calem Christopher McTavish-Giagnocavo
 /// September 2019
@@ -53,7 +54,7 @@ namespace GreetingCardSummative
             //text
             g.DrawString("HAPPY BIRTHDAY", titlefont, titlefontbrush, 150, 40);
 
-            //cake
+            //cake body
             g.FillRectangle(cakebrush, 280, 280, 260, 110);
             g.FillRectangle(cakebrush2, 280, 230, 260, 80);
 
@@ -151,26 +152,31 @@ namespace GreetingCardSummative
 
         private void Form1_Click(object sender, EventArgs e)
         {
+            //graphics
             Graphics g = this.CreateGraphics();
 
+            //text graphics
             Font eatfont = new Font("Papyrus", 25, FontStyle.Bold);
             Font birthdayfont = new Font("Monotype Corsiva", 45, FontStyle.Italic);
-
             SolidBrush birthdayfontbrush = new SolidBrush(Color.DarkRed);
             SolidBrush eatfontbrush = new SolidBrush(Color.Blue);
 
+            //cake body
             SolidBrush cakebrush = new SolidBrush(Color.Chocolate);
             SolidBrush cakebrush2 = new SolidBrush(Color.DarkSlateBlue);
 
+            //candle brushes
             SolidBrush candlebrush1 = new SolidBrush(Color.OrangeRed);
             SolidBrush candlebrush2 = new SolidBrush(Color.LawnGreen);
             SolidBrush candlebrush3 = new SolidBrush(Color.DodgerBlue);
             SolidBrush candlebrush4 = new SolidBrush(Color.Gold);
             SolidBrush candleflame = new SolidBrush(Color.Orange);
 
+            //freckle and bubble brushes
             SolidBrush frecklebrush = new SolidBrush(Color.WhiteSmoke);
             SolidBrush bubblebrush = new SolidBrush(Color.LightBlue);
 
+            //sounds
             SoundPlayer birth = new SoundPlayer(Properties.Resources.HappyBirthday);
             SoundPlayer munch = new SoundPlayer(Properties.Resources.munch);
 
@@ -198,23 +204,19 @@ namespace GreetingCardSummative
             g.FillEllipse(cakebrush2, 520, 295, 20, 20);
 
             //Frosting Freckles
-            g.FillEllipse(frecklebrush, 405, 300, 5, 5);
             g.FillEllipse(frecklebrush, 285, 260, 5, 5);
             g.FillEllipse(frecklebrush, 297, 290, 5, 5);
             g.FillEllipse(frecklebrush, 306, 270, 5, 5);
             g.FillEllipse(frecklebrush, 312, 300, 5, 5);
             g.FillEllipse(frecklebrush, 313, 252, 5, 5);
             g.FillEllipse(frecklebrush, 331, 275, 5, 5);
-            g.FillEllipse(frecklebrush, 460, 300, 5, 5);
             g.FillEllipse(frecklebrush, 340, 260, 5, 5);
             g.FillEllipse(frecklebrush, 352, 290, 5, 5);
             g.FillEllipse(frecklebrush, 361, 270, 5, 5);
             g.FillEllipse(frecklebrush, 367, 300, 5, 5);
             g.FillEllipse(frecklebrush, 368, 252, 5, 5);
             g.FillEllipse(frecklebrush, 386, 275, 5, 5);
-            g.FillEllipse(frecklebrush, 515, 300, 5, 5);
             g.FillEllipse(frecklebrush, 395, 260, 5, 5);
-            g.FillEllipse(frecklebrush, 407, 290, 5, 5);
             g.FillEllipse(frecklebrush, 416, 270, 5, 5);
             g.FillEllipse(frecklebrush, 422, 300, 5, 5);
             g.FillEllipse(frecklebrush, 423, 252, 5, 5);
@@ -262,9 +264,12 @@ namespace GreetingCardSummative
             Thread.Sleep(1000);
 
             //cake without candles
+
+            //text and clear
             g.DrawString("HAPPY BIRTHDAY", birthdayfont, birthdayfontbrush, 150, 40);
             g.Clear(Color.Khaki);
 
+            //cake body
             g.FillRectangle(cakebrush, 280, 280, 260, 110);
             g.FillRectangle(cakebrush2, 280, 230, 260, 80);
 
@@ -284,23 +289,19 @@ namespace GreetingCardSummative
             g.FillEllipse(cakebrush2, 520, 295, 20, 20);
 
             //Frosting Freckles
-            g.FillEllipse(frecklebrush, 405, 300, 5, 5);
             g.FillEllipse(frecklebrush, 285, 260, 5, 5);
             g.FillEllipse(frecklebrush, 297, 290, 5, 5);
             g.FillEllipse(frecklebrush, 306, 270, 5, 5);
             g.FillEllipse(frecklebrush, 312, 300, 5, 5);
             g.FillEllipse(frecklebrush, 313, 252, 5, 5);
             g.FillEllipse(frecklebrush, 331, 275, 5, 5);
-            g.FillEllipse(frecklebrush, 460, 300, 5, 5);
             g.FillEllipse(frecklebrush, 340, 260, 5, 5);
             g.FillEllipse(frecklebrush, 352, 290, 5, 5);
             g.FillEllipse(frecklebrush, 361, 270, 5, 5);
             g.FillEllipse(frecklebrush, 367, 300, 5, 5);
             g.FillEllipse(frecklebrush, 368, 252, 5, 5);
             g.FillEllipse(frecklebrush, 386, 275, 5, 5);
-            g.FillEllipse(frecklebrush, 515, 300, 5, 5);
             g.FillEllipse(frecklebrush, 395, 260, 5, 5);
-            g.FillEllipse(frecklebrush, 407, 290, 5, 5);
             g.FillEllipse(frecklebrush, 416, 270, 5, 5);
             g.FillEllipse(frecklebrush, 422, 300, 5, 5);
             g.FillEllipse(frecklebrush, 423, 252, 5, 5);
@@ -337,7 +338,7 @@ namespace GreetingCardSummative
             //Sound
             Thread.Sleep(200);
             birth.Play();
-            Thread.Sleep(500);
+            Thread.Sleep(1000);
             
             //message text
             g.DrawString("Hope you have fun today!", eatfont, eatfontbrush, 195, 100);
@@ -354,7 +355,7 @@ namespace GreetingCardSummative
             g.DrawString("HAPPY BIRTHDAY", birthdayfont, birthdayfontbrush, 150, 40);
             g.DrawString("Hope you have fun today!", eatfont, eatfontbrush, 195, 100);
 
-            //cake
+            //cake body
             g.FillRectangle(cakebrush, 340, 280, 200, 110);
             g.FillRectangle(cakebrush2, 340, 230, 200, 80);
 
@@ -371,16 +372,13 @@ namespace GreetingCardSummative
             g.FillEllipse(cakebrush2, 520, 295, 20, 20);
 
             //Frosting Freckles
-            g.FillEllipse(frecklebrush, 460, 300, 5, 5);
             g.FillEllipse(frecklebrush, 340, 260, 5, 5);
             g.FillEllipse(frecklebrush, 352, 290, 5, 5);
             g.FillEllipse(frecklebrush, 361, 270, 5, 5);
             g.FillEllipse(frecklebrush, 367, 300, 5, 5);
             g.FillEllipse(frecklebrush, 368, 252, 5, 5);
             g.FillEllipse(frecklebrush, 386, 275, 5, 5);
-            g.FillEllipse(frecklebrush, 515, 300, 5, 5);
             g.FillEllipse(frecklebrush, 395, 260, 5, 5);
-            g.FillEllipse(frecklebrush, 407, 290, 5, 5);
             g.FillEllipse(frecklebrush, 416, 270, 5, 5);
             g.FillEllipse(frecklebrush, 422, 300, 5, 5);
             g.FillEllipse(frecklebrush, 423, 252, 5, 5);
@@ -411,9 +409,11 @@ namespace GreetingCardSummative
             g.FillEllipse(bubblebrush, 657, 195, 40, 40);
             g.FillEllipse(bubblebrush, 680, 320, 40, 40);
 
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
 
             //Cake animation frame 3
+
+            //text, clear, and sound
             g.Clear(Color.Khaki);
             munch.Play();
             g.DrawString("HAPPY BIRTHDAY", birthdayfont, birthdayfontbrush, 150, 40);
@@ -437,7 +437,6 @@ namespace GreetingCardSummative
             g.FillEllipse(frecklebrush, 386, 275, 5, 5);
             g.FillEllipse(frecklebrush, 515, 300, 5, 5);
             g.FillEllipse(frecklebrush, 395, 260, 5, 5);
-            g.FillEllipse(frecklebrush, 407, 290, 5, 5);
             g.FillEllipse(frecklebrush, 416, 270, 5, 5);
             g.FillEllipse(frecklebrush, 422, 300, 5, 5);
             g.FillEllipse(frecklebrush, 423, 252, 5, 5);
@@ -468,9 +467,11 @@ namespace GreetingCardSummative
             g.FillEllipse(bubblebrush, 657, 195, 40, 40);
             g.FillEllipse(bubblebrush, 680, 320, 40, 40);
 
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
 
             //Cake animation frame 4
+
+            //text, clear, and sound
             g.Clear(Color.Khaki);
             munch.Play();
             g.DrawString("HAPPY BIRTHDAY", birthdayfont, birthdayfontbrush, 150, 40);
@@ -518,9 +519,11 @@ namespace GreetingCardSummative
             g.FillEllipse(bubblebrush, 657, 195, 40, 40);
             g.FillEllipse(bubblebrush, 680, 320, 40, 40);
 
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
 
             //Cake animation frame 5
+
+            //text, clear, and sound
             g.Clear(Color.Khaki);
             munch.Play();
             g.DrawString("HAPPY BIRTHDAY", birthdayfont, birthdayfontbrush, 150, 40);
@@ -557,9 +560,11 @@ namespace GreetingCardSummative
             g.FillEllipse(bubblebrush, 657, 195, 40, 40);
             g.FillEllipse(bubblebrush, 680, 320, 40, 40);
 
-            Thread.Sleep(1000);
+            Thread.Sleep(2000);
 
             //Cake animation frame 6
+
+            //text, clear, and sound
             g.Clear(Color.Khaki);
             munch.Play();
             g.DrawString("HAPPY BIRTHDAY", birthdayfont, birthdayfontbrush, 150, 40);
@@ -580,6 +585,21 @@ namespace GreetingCardSummative
             g.FillEllipse(bubblebrush, 657, 195, 40, 40);
             g.FillEllipse(bubblebrush, 680, 320, 40, 40);
 
+            Thread.Sleep(2000);
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            //graphics objects
+            Graphics g = this.CreateGraphics();
+
+            Font bye = new Font("Papyrus", 40, FontStyle.Bold);
+            SolidBrush byebrush = new SolidBrush(Color.Blue);
+           
+            //goodbye message
+            Thread.Sleep(600);
+            g.Clear(Color.Khaki);
+            g.DrawString("Have a great birthday!!!", bye, byebrush, 125, 60);
             Thread.Sleep(1000);
         }
     }
