@@ -595,9 +595,12 @@ namespace GreetingCardSummative
 
             Font bye = new Font("Papyrus", 40, FontStyle.Bold);
             SolidBrush byebrush = new SolidBrush(Color.Blue);
+            SoundPlayer yay = new SoundPlayer(Properties.Resources.yay);
            
             //goodbye message
-            Thread.Sleep(600);
+            Thread.Sleep(300);
+            yay.Play();
+            Thread.Sleep(300);
             g.Clear(Color.Khaki);
             g.DrawString("Have a great birthday!!!", bye, byebrush, 125, 60);
             Thread.Sleep(1000);
